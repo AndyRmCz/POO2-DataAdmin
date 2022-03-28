@@ -8,10 +8,10 @@ import javax.swing.JOptionPane;
 
 public class Conexion {
     String db = "DataAdminl";
-    String url = "jbdc:mysql://rpimate.local:3306/";
-    String user ="root";
-    String passwd = "";
-    String driver = "com.mysql.cj.jdbc.driver";
+    String url = "jdbc:mysql://rpimate.local:3306/";
+    String user ="POO";
+    String passwd = "Programa$1";
+    String driver = "com.mysql.cj.jdbc.Driver";
     Connection conn;
     
     public Conexion(){
@@ -28,7 +28,6 @@ public class Conexion {
             // TODO Auto-generated catch block
             //JOptionPane.showMessageDialog(null, "No conectado", "Estado", JOptionPane.INFORMATION_MESSAGE);
             System.out.println("Conección fallida");
-            e.printStackTrace();
         }
         return conn;
     }
@@ -36,6 +35,7 @@ public class Conexion {
     public void desconectar(){
         try {
             conn.close();
+            System.out.println("Hasta luego");
         } catch (SQLException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
