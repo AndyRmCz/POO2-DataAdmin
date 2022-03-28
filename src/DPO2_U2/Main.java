@@ -9,7 +9,9 @@ public class Main {
 
     public static void main(String[] args) {
         // TODO code application logic here
-        LaunchPage launchPage = new LaunchPage();
+        //LaunchPage launchPage = new LaunchPage();
+        Conexion cx = new Conexion();
+        cx.conectar();
     }
     
 }
