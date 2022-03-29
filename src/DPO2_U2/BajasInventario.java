@@ -55,9 +55,9 @@ public class BajasInventario implements ActionListener {
     JTextField tNombreProducto = new JTextField();
     JTextField tYSalida = new JTextField();
     
-    JButton bajasBuscarButton = new JButton("Buscar");
-    JButton bajasSubmitButton = new JButton("Aceptar");
-    JButton bajasSalirButton = new JButton("Salir");
+    Botones bajasBuscarButton = new Botones("Buscar");
+    Botones bajasSubmitButton = new Botones("Aceptar");
+    Botones bajasSalirButton = new Botones("Salir");
     
     BajasInventario(){
         

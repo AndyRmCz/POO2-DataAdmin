@@ -101,9 +101,9 @@ public class Nomina extends JFrame implements ActionListener {
     JTextField bonosDespField = new JTextField(String.valueOf(0));
     JTextField ayudaServField = new JTextField(String.valueOf(0));
 
-    JButton altasAltaEmpleadoButon = new JButton("Agregar");
-    JButton reporteEmpleadosButon = new JButton("Ver Empleados");
-    JButton cancelarButon = new JButton("Cancelar");
+    Botones altasAltaEmpleadoButon = new Botones("Agregar");
+    Botones reporteEmpleadosButon = new Botones("Ver Empleados");
+    Botones cancelarButon = new Botones("Cancelar");
     
 
     

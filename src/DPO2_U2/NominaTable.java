@@ -23,7 +23,7 @@ public class NominaTable extends JFrame implements ActionListener{
     DefaultTableModel modelo = new DefaultTableModel();
 
     JPanel buttonPanel = new JPanel();
-    JButton imprimirNomina = new JButton("Imprimir");
+    Botones imprimirNomina = new Botones("Imprimir");
     
     
     NominaTable(Object[][] datos) throws PrinterException{

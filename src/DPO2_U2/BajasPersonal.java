@@ -49,9 +49,9 @@ public class BajasPersonal implements ActionListener {
     JTextField tApellidoPaterno = new JTextField();
     JTextField tApellidoMaterno = new JTextField();
     
-    JButton bajasBuscarButton = new JButton("Buscar");
-    JButton bajasSubmitButton = new JButton("Aceptar");
-    JButton bajasSalirButton = new JButton("Salir");
+    Botones bajasBuscarButton = new Botones("Buscar");
+    Botones bajasSubmitButton = new Botones("Aceptar");
+    Botones bajasSalirButton = new Botones("Salir");
           
     BajasPersonal(){
         eNumeroEmpleado.setBounds(10, 50, 250, 25);

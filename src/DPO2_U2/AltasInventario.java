@@ -60,9 +60,9 @@ public class AltasInventario implements ActionListener {
     JTextField tQProducts = new JTextField();
     JTextField tUbicacion = new JTextField();
     
-    JButton altasBuscarButton = new JButton("Buscar");
-    JButton altasSubmitButton = new JButton("Aceptar");
-    JButton altasSalirButton = new JButton("Salir");
+    Botones altasBuscarButton = new Botones("Buscar");
+    Botones altasSubmitButton = new Botones("Aceptar");
+    Botones altasSalirButton = new Botones("Salir");
           
     AltasInventario(){
         eNombreProducto.setBounds(10, 50, 250, 25);

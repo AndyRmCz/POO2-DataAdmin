@@ -78,7 +78,7 @@ public class AltasPersonal implements ActionListener {
     JTextField tSueldoEmpleado = new JTextField();
     
     Botones altasSubmitButton = new Botones("Aceptar");
-    JButton altasSalirButton = new JButton("Salir");
+    Botones altasSalirButton = new Botones("Salir");
 
     //Connection variables
     Conexion cx = new Conexion();
@@ -109,10 +109,8 @@ public class AltasPersonal implements ActionListener {
         tSueldoEmpleado.setBounds(150, 290, 250, 25);
         
         altasSubmitButton.setBounds(60, 340, 120, 30);
-        altasSubmitButton.setBackground(Color.LIGHT_GRAY);
         altasSalirButton.setBounds(220, 340, 120, 30);
-        altasSalirButton.setBackground(Color.LIGHT_GRAY);
-        
+                
         //Set ActionListener to menu items
         altasPersonalMenu.addActionListener(this);
         bajasPersonalMenu.addActionListener(this);
