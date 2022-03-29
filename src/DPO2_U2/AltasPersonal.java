@@ -8,6 +8,10 @@ import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -71,6 +75,9 @@ public class AltasPersonal implements ActionListener {
     
     JButton altasSubmitButton = new JButton("Aceptar");
     JButton altasSalirButton = new JButton("Salir");
+
+    //Connection variables
+    Conexion cx = new Conexion();
           
     AltasPersonal(){
         eNumeroEmpleado.setBounds(10, 50, 250, 25);
@@ -181,7 +188,14 @@ public class AltasPersonal implements ActionListener {
             LaunchPage principal = new LaunchPage();
         }
         if(e.getSource() == altasSubmitButton){
-            JOptionPane.showMessageDialog(null, "Aún no hay conexión con la BD", "Precaución", JOptionPane.INFORMATION_MESSAGE);
+            try {
+                Statement st = cx.conectar().createStatement();
+                st.executeUpdate("insert into empleados (EmpleadoId, NombreEmpleado, SueldoBruto, FechaIngresoEmpleado) values(" + tNumeroEmpleado.getText() +", '" + tNombreEmpleado.getText() +"'," + tSueldoEmpleado.getText() + ",'Enero');");
+            } catch (SQLException e1) {
+                // TODO Auto-generated catch block
+                e1.printStackTrace();
+            }
+            //JOptionPane.showMessageDialog(null, "Aún no hay conexión con la BD", "Precaución", JOptionPane.INFORMATION_MESSAGE);
         }
         if(e.getSource() == vNomina){
             altasPersonal.dispose();

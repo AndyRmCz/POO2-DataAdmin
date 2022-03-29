@@ -8,6 +8,9 @@ import java.awt.BorderLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.print.PrinterException;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 
 import javax.swing.JButton;
 import javax.swing.JCheckBox;
@@ -369,7 +372,31 @@ public class Nomina extends JFrame implements ActionListener {
             }
         }
         if (e.getSource() == reporteEmpleadosButon){
-            JOptionPane.showMessageDialog(null, "Aun no hay concexión a la BD","Precaucion", JOptionPane.INFORMATION_MESSAGE);
+            Conexion cx = new Conexion();
+            try {
+                Statement st = cx.conectar().createStatement();
+                ResultSet rs = st.executeQuery("SELECT * FROM empleados WHERE EmpleadoID = '" + tNEmpleado.getText() + "'");
+                //java.sql.ResultSetMetaData rsmt = rs.getMetaData();
+                // int columnsCount = rsmt.getColumnCount();
+                // while (rs.next()){
+                //     for (int i = 1; i <= columnsCount; i++){
+                //         if (i > 1) System.out.print(" | ");
+                //         System.out.print(rs.getString(i));
+                //     }
+                //     System.out.println();
+                // }
+                if (rs.next()){
+                tNombreEmpleado.setText(rs.getString(2));
+                tSalarioEmpleado.setText(rs.getString(3));
+                tFechaIngreso.setText(rs.getString(4));
+                }
+                
+            }
+            catch (SQLException e1) {
+                // TODO Auto-generated catch block
+                e1.printStackTrace();
+            }
+            cx.desconectar();
         }
         //get text from textfield to cast to int and divide by 100
         // if(cuotaSindicalChBox.getText().contains("%")){
