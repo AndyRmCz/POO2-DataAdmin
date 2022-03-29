@@ -74,7 +74,7 @@ public class LaunchPage implements ActionListener{
         launchPage.setJMenuBar(barra);
         
         //Frame
-        launchPage.getContentPane().setBackgroundColor(Color.Black);
+        
         launchPage.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         launchPage.setSize(500,500);
         launchPage.setLocationRelativeTo(null);

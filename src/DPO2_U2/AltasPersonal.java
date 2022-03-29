@@ -4,6 +4,7 @@
  */
 package DPO2_U2;
 
+import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
@@ -19,7 +20,10 @@ import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 import javax.swing.JOptionPane;
+import javax.swing.JSeparator;
 import javax.swing.JTextField;
+
+import org.w3c.dom.css.RGBColor;
 
 /**
  *
@@ -91,6 +95,10 @@ public class AltasPersonal implements ActionListener {
         eSueldoEmpleado.setBounds(10, 290, 250, 25);
         
         tNumeroEmpleado.setBounds(150, 50, 250, 25);
+        // tNumeroEmpleado.setBorder(null);
+        // JSeparator sp = new JSeparator();
+        // sp.setBounds(150, 50, 250, 10);
+        tNumeroEmpleado.setBackground(null);
         tNombreEmpleado.setBounds(150, 80, 250, 25);
         tApellidoPaterno.setBounds(150, 110, 250, 25);
         tApellidoMaterno.setBounds(150, 140, 250, 25);
@@ -101,7 +109,9 @@ public class AltasPersonal implements ActionListener {
         tSueldoEmpleado.setBounds(150, 290, 250, 25);
         
         altasSubmitButton.setBounds(60, 340, 120, 30);
+        altasSubmitButton.setBackground(Color.LIGHT_GRAY);
         altasSalirButton.setBounds(220, 340, 120, 30);
+        altasSalirButton.setBackground(Color.LIGHT_GRAY);
         
         //Set ActionListener to menu items
         altasPersonalMenu.addActionListener(this);
