@@ -77,7 +77,7 @@ public class AltasPersonal implements ActionListener {
     JTextField tPuestoEmpleado = new JTextField();
     JTextField tSueldoEmpleado = new JTextField();
     
-    JButton altasSubmitButton = new JButton("Aceptar");
+    Botones altasSubmitButton = new Botones("Aceptar");
     JButton altasSalirButton = new JButton("Salir");
 
     //Connection variables
